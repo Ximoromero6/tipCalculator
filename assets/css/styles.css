@@ -1,0 +1,355 @@
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* Colos */
+/* End Colors */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #c5e4e7;
+}
+
+main {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main .logo {
+  display: block;
+  margin: 50px auto;
+}
+
+main .container {
+  border-radius: 20px;
+  padding: 30px;
+  background-color: white;
+  height: 450px;
+}
+
+main .container #formCalculateTip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+main .container #formCalculateTip .calculationContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px 30px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  /* Contenedor botones porcentaje */
+}
+
+main .container #formCalculateTip .calculationContainer .containerField label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #00494d;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField label.sectionTitle {
+  margin-bottom: 5px;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField {
+  position: relative;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f4fafa;
+  outline: 0;
+  font-family: inherit;
+  font-size: 20px;
+  color: #00494d;
+  border: 2px solid transparent;
+  font-weight: 700;
+  padding-left: 40px;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  cursor: pointer;
+  text-align: right;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField input::-webkit-outer-spin-button, main .container #formCalculateTip .calculationContainer .containerField .inputField input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField input:focus {
+  border-color: #26c0ab;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField input::-webkit-input-placeholder {
+  font: inherit;
+  color: #7f9c9f;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField input:-ms-input-placeholder {
+  font: inherit;
+  color: #7f9c9f;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField input::-ms-input-placeholder {
+  font: inherit;
+  color: #7f9c9f;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField input::placeholder {
+  font: inherit;
+  color: #7f9c9f;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .inputField img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage input[type="radio"] {
+  display: none;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00494d;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton {
+  background-color: #f4fafa;
+  height: 100%;
+  padding: 0;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber {
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  color: #00494d;
+  background-color: #f4fafa;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  border: 2px solid transparent;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  text-align: right;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber::-webkit-outer-spin-button, main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber:focus {
+  border-color: #26c0ab;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber::-webkit-input-placeholder {
+  text-align: center;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber:-ms-input-placeholder {
+  text-align: center;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber::-ms-input-placeholder {
+  text-align: center;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.customTipButton #inputRadioCustomNumber::placeholder {
+  text-align: center;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label.selected {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label:hover {
+  background-color: #9FE8DF;
+  color: #00494d;
+}
+
+main .container #formCalculateTip .calculationContainer .containerField .containerTipPercentage .containerTip label:hover #inputRadioCustomNumber {
+  background-color: #9FE8DF;
+  color: #00494d;
+}
+
+main .container #formCalculateTip .resultsContainer {
+  background-color: #00494d;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 12px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 30px;
+}
+
+main .container #formCalculateTip .resultsContainer .tipAmountPerson,
+main .container #formCalculateTip .resultsContainer .totalPerson {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0;
+}
+
+main .container #formCalculateTip .resultsContainer .tipAmountPerson p,
+main .container #formCalculateTip .resultsContainer .totalPerson p {
+  color: white;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 700;
+}
+
+main .container #formCalculateTip .resultsContainer .tipAmountPerson p span,
+main .container #formCalculateTip .resultsContainer .totalPerson p span {
+  color: #7f9c9f;
+  font-size: 12px;
+}
+
+main .container #formCalculateTip .resultsContainer .tipAmountPerson h3,
+main .container #formCalculateTip .resultsContainer .totalPerson h3 {
+  color: #26c0ab;
+  font-size: 38px;
+}
+
+main .container #formCalculateTip .resultsContainer .resetButton {
+  display: block;
+  margin-top: auto;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  background-color: #26c0ab;
+}
+
+main .container #formCalculateTip .resultsContainer .resetButton p {
+  color: #00494d;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+main .container #formCalculateTip .resultsContainer .resetButton.disabled {
+  background-color: #0C686D;
+}
+
+@media (max-width: 768px) {
+  main .container {
+    height: auto;
+  }
+  main .container #formCalculateTip {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container #formCalculateTip .calculationContainer {
+    padding: 0;
+  }
+  main .container #formCalculateTip .resultsContainer {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

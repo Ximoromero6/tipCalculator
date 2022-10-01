@@ -1,0 +1,258 @@
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Colos */
+
+$Strong_cyan: hsl(172,
+67%,
+45%);
+$Very_dark_cyan: hsl(183,
+100%,
+15%);
+$Dark_grayish_cyan: hsl(186,
+14%,
+43%);
+$Grayish_cyan: hsl(184,
+14%,
+56%);
+$Light_grayish_cyan: hsl(185,
+41%,
+84%);
+$Very_light_grayish_cyan: hsl(189,
+41%,
+97%);
+$White: hsl(0,
+0%,
+100%);
+
+/* End Colors */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    display: flex;
+    justify-content: center;
+    background-color: $Light_grayish_cyan;
+}
+
+main {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    .logo {
+        display: block;
+        margin: 50px auto;
+    }
+    .container {
+        border-radius: 20px;
+        padding: 30px;
+        background-color: $White;
+        height: 450px;
+        #formCalculateTip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            .calculationContainer {
+                flex: 1;
+                padding: 10px 30px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .containerField {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    label {
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: $Very_dark_cyan;
+                        &.sectionTitle {
+                            margin-bottom: 5px;
+                        }
+                    }
+                    .inputField {
+                        position: relative;
+                        input {
+                            width: 100%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            background-color: $Very_light_grayish_cyan;
+                            outline: 0;
+                            font-family: inherit;
+                            font-size: 20px;
+                            color: $Very_dark_cyan;
+                            border: 2px solid transparent;
+                            font-weight: 700;
+                            padding-left: 40px;
+                            transition: all .1s;
+                            cursor: pointer;
+                            text-align: right;
+                            &::-webkit-outer-spin-button,
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                            &:focus {
+                                border-color: $Strong_cyan;
+                            }
+                            &::placeholder {
+                                font: inherit;
+                                color: $Grayish_cyan;
+                            }
+                        }
+                        img {
+                            position: absolute;
+                            left: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    /* Contenedor botones porcentaje */
+                    .containerTipPercentage {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-gap: 15px;
+                        input[type="radio"] {
+                            display: none;
+                        }
+                        .containerTip {
+                            label {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: $Very_dark_cyan;
+                                padding: 10px;
+                                border-radius: 4px;
+                                color: $White;
+                                cursor: pointer;
+                                transition: all .1s;
+                                font-size: 16px;
+                                font-weight: 700;
+                                &.customTipButton {
+                                    background-color: $Very_light_grayish_cyan;
+                                    height: 100%;
+                                    padding: 0;
+                                    #inputRadioCustomNumber {
+                                        transition: all .1s;
+                                        color: $Very_dark_cyan;
+                                        background-color: $Very_light_grayish_cyan;
+                                        width: 100%;
+                                        height: 100%;
+                                        outline: 0;
+                                        border: 2px solid transparent;
+                                        padding: 8px;
+                                        border-radius: 4px;
+                                        cursor: pointer;
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                        font-family: inherit;
+                                        text-align: right;
+                                        &::-webkit-outer-spin-button,
+                                        &::-webkit-inner-spin-button {
+                                            -webkit-appearance: none;
+                                            margin: 0;
+                                        }
+                                        &:focus {
+                                            border-color: $Strong_cyan;
+                                        }
+                                        &::placeholder {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                &.selected {
+                                    background-color: $Strong_cyan;
+                                    color: $Very_dark_cyan;
+                                }
+                                &:hover {
+                                    background-color: #9FE8DF;
+                                    color: $Very_dark_cyan;
+                                    #inputRadioCustomNumber {
+                                        background-color: #9FE8DF;
+                                        color: $Very_dark_cyan;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .resultsContainer {
+                background-color: $Very_dark_cyan;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                border-radius: 12px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding: 30px;
+                .tipAmountPerson,
+                .totalPerson {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 20px 0;
+                    p {
+                        color: $White;
+                        font-size: 14px;
+                        display: flex;
+                        flex-direction: column;
+                        font-weight: 700;
+                        span {
+                            color: $Grayish_cyan;
+                            font-size: 12px;
+                        }
+                    }
+                    h3 {
+                        color: $Strong_cyan;
+                        font-size: 38px;
+                    }
+                }
+                .resetButton {
+                    display: block;
+                    margin-top: auto;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 10px;
+                    font-family: inherit;
+                    cursor: pointer;
+                    transition: all .1s;
+                    background-color: $Strong_cyan;
+                    p {
+                        color: $Very_dark_cyan;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                    &.disabled {
+                        background-color: #0C686D;
+                    }
+                }
+            }
+        }
+        @media(max-width: 768px) {
+            height: auto;
+            #formCalculateTip {
+                flex-direction: column;
+                .calculationContainer {
+                    padding: 0;
+                }
+                .resultsContainer {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
